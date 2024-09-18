@@ -1,0 +1,21 @@
+﻿<Window x:Class="AI_Email.ReplyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AI_Email"
+        mc:Ignorable="d"
+        Title="ReplyWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label>To :</Label><TextBox Name="txtReplyTo" Width="200" Margin="5" IsReadOnly="True"/>
+            <Label>Subject :</Label><TextBox Name="txtReplySubject" Width="200" Margin="5"/>
+        </StackPanel>
+        <TextBox Name="txtReplyBody" Grid.Row="1" Margin="10" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+        <Button Name="btnSendReply" Content="Send" Width="100" Margin="550,10,150,10" Click="btnSendReply_Click" RenderTransformOrigin="2.35,0.681"/>
+    </Grid>
+</Window>

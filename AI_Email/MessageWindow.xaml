@@ -1,0 +1,23 @@
+﻿<Window x:Class="AI_Email.MessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AI_Email"
+        mc:Ignorable="d"
+        Title="MessageWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Margin="10">
+            <TextBlock Name="txtSender" Margin="5"/>
+            <TextBlock Name="txtTimeStamp" Margin="5"/>
+            <TextBlock Name="txtSubject" Margin="5"/>
+        </StackPanel>
+        <TextBox Name="txtBody" Grid.Row="1" Margin="10,10,10,70" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Grid.RowSpan="2"/>
+        <Button Name="btnReply" Content="Reply" Width="100" Margin="350,118,350,10" Grid.Row="2" Click="btnReply_Click"/>
+    </Grid>
+</Window>
